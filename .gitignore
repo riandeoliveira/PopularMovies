@@ -1,5 +1,4 @@
 .env
-.husky
 .next
 .swc
 .vercel
@@ -7,4 +6,4 @@
 /coverage
 /dist
 /node_modules
-/TODO.md
+/NOTES.md

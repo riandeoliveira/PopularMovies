@@ -1,14 +1,11 @@
-import Main from "templates/Main";
+import { Greetings } from "components/Greetings";
 import type { NextPage } from "next";
 
 const Home: NextPage = (): JSX.Element => {
   return (
-    <>
-      <Main>
-        <h1>Hello, Rian Oliveira!</h1>
-        <h2>Have a nice coding ;)</h2>
-      </Main>
-    </>
+    <div className="font-primary h-screen bg-zinc-900 flex items-center justify-center flex-col gap-2">
+      <Greetings />
+    </div>
   );
 };
 

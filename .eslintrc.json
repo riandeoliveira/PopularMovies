@@ -1,5 +1,9 @@
 {
-  "extends": ["eslint:recommended", "next/core-web-vitals"],
+  "extends": [
+    "eslint:recommended",
+    "next/core-web-vitals",
+    "plugin:cypress/recommended"
+  ],
   "globals": {
     "JSX": "readonly",
     "React": "readonly"
@@ -39,7 +43,6 @@
     "func-call-spacing": "error",
     "func-name-matching": "error",
     "func-names": "error",
-    "func-style": "error",
     "generator-star-spacing": "error",
     "guard-for-in": "error",
     "id-denylist": "error",
@@ -65,7 +68,7 @@
     "no-div-regex": "error",
     "no-duplicate-imports": "error",
     "no-else-return": "error",
-    "no-empty-function": "error",
+    "no-empty-function": "warn",
     "no-eq-null": "error",
     "no-eval": "error",
     "no-extend-native": "error",
@@ -145,7 +148,6 @@
     "space-in-parens": "error",
     "space-infix-ops": "error",
     "space-unary-ops": "error",
-    "spaced-comment": "error",
     "strict": "error",
     "switch-colon-spacing": "error",
     "template-curly-spacing": "error",

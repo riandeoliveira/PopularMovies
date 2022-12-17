@@ -65,9 +65,9 @@
         <span>Markdown</span>
       </td>
       <td align="center" width="110" height="110">
-        <img src="https://skillicons.dev/icons?i=sass" />
+        <img src="https://skillicons.dev/icons?i=tailwind" />
         <br>
-        <span>SASS</span>
+        <span>TailwindCSS</span>
       </td>
       <td align="center" width="110" height="110">
         <img src="https://skillicons.dev/icons?i=ts" />

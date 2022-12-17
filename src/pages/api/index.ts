@@ -1,9 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-const handler = (res: NextApiResponse) => {
-  res
+export default function handler(
+  _request: NextApiRequest,
+  response: NextApiResponse
+): void {
+  return response
     .status(200)
-    .send({ name: "Hello, Rian Oliveira! Have a nice coding" });
-};
-
-export default handler;
+    .json({ title: "Hello, Rian Oliveira!", message: "Have a nice coding!" });
+}

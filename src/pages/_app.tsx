@@ -1,14 +1,16 @@
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import "styles/_global.scss";
+import "styles/globals.css";
 
-const App = ({ Component, pageProps }: AppProps): JSX.Element => (
-  <>
-    <Head>
-      <title>Popular Movies</title>
-    </Head>
-    <Component {...pageProps} />
-  </>
-);
+const App = ({ Component, pageProps }: AppProps): JSX.Element => {
+  return (
+    <>
+      <Head>
+        <title>Popular Movies</title>
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
+};
 
 export default App;
