@@ -9,10 +9,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "primary-500": "#006aeb",
+        "complementary-red": "#BA0707",
+        "complementary-yellow": "#D7A82E",
+        "neutral-dark": "#454558",
+        "neutral-light": "#ACACAC",
+        "neutral-lightness": "#ffffff",
+        "primary-dark": "#17162E",
+        "primary-light": "#1D1C3B",
       },
       fontFamily: {
-        primary: ["Roboto", "sans-serif"],
+        "primary-family": ["Kumbh Sans", "sans-serif"],
       },
       screens: {
         desktop: "2560px",
