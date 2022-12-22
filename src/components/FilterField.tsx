@@ -6,7 +6,7 @@ export const FilterField = (): JSX.Element => {
         id="toggle_movies"
         title="Mostrar filmes selecionados"
       />
-      <label htmlFor="toggle_movies" className="text-[18px]">
+      <label htmlFor="toggle_movies" className="text-[18px] text-white">
         Mostrar meus filmes favoritos apenas
       </label>
     </div>

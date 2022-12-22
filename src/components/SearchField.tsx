@@ -7,7 +7,7 @@ export const SearchField = (): JSX.Element => {
         <input
           type="text"
           placeholder="Digite algum filme para pesquisar..."
-          className="bg-neutral-dark w-full outline-none"
+          className="bg-neutral-dark w-full outline-none text-white"
         />
         <button type="submit" title="Buscar filme">
           <SearchIcon />
