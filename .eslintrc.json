@@ -34,7 +34,6 @@
     "computed-property-spacing": "error",
     "consistent-return": "error",
     "consistent-this": "error",
-    "curly": "error",
     "default-case-last": "error",
     "default-case": "error",
     "default-param-last": "error",
