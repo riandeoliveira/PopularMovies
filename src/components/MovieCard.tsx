@@ -47,7 +47,7 @@ export const MovieCard = (props: MovieCardProps): JSX.Element => {
           </div>
         </div>
       </div>
-      <p className="text-neutral-light font-medium leading-8 w-[592px]">
+      <p className="text-neutral-light font-medium leading-8 w-[592px] flex items-center">
         {props.description}
       </p>
     </div>
