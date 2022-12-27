@@ -9,7 +9,9 @@ export const SearchField = (): JSX.Element => {
   const handleSubmit = (event: FormEvent): void => {
     event.preventDefault();
 
-    fetchMoviesByName(movieSearchField.current?.value as string);
+    const movieName: string = movieSearchField.current?.value ?? "";
+
+    fetchMoviesByName(movieName);
   };
 
   return (
