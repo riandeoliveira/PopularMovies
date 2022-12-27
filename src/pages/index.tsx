@@ -5,7 +5,9 @@ import { SearchField } from "components/SearchField";
 import type { GetStaticProps, NextPage } from "next";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { setApiKey } from "redux/movie/actions";
+import { setApiKey, setFavoriteMovies } from "redux/movie/actions";
+import type { IMovie } from "types/movie";
+import { useLocalStorage } from "usehooks-ts";
 
 interface HomeProps {
   apiKey: string;
@@ -21,9 +23,14 @@ export const getStaticProps: GetStaticProps = () => {
 
 const Home: NextPage<HomeProps> = ({ apiKey }): JSX.Element => {
   const dispatch = useDispatch();
+  const [storageMovies, setStorageMovies] = useLocalStorage<IMovie[]>(
+    "favorite_movies",
+    []
+  );
 
   useEffect(() => {
     dispatch(setApiKey(apiKey));
+    dispatch(setFavoriteMovies(storageMovies));
   }, []);
 
   return (

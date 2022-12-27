@@ -16,6 +16,11 @@ export const setApiKey = (payload: string) => ({
   payload,
 });
 
+export const setFavoriteMovies = (payload: IMovie[]) => ({
+  type: MovieActionTypes.SET_FAVORITE_MOVIES,
+  payload,
+});
+
 export const setFilterType = (payload: "all" | "favorites") => ({
   type: MovieActionTypes.SET_FILTER_TYPE,
   payload,

@@ -40,9 +40,14 @@ export const useMovie = (): UseMovieProps => {
   };
 
   const addMovie = (movie: IMovie): void => {
-    dispatch(addMovieToFavorites(movie));
+    const newMovie: IMovie = {
+      ...movie,
+      favorite: true,
+    };
 
-    setStorageMovies([...storageMovies, movie]);
+    dispatch(addMovieToFavorites(newMovie));
+
+    setStorageMovies([...storageMovies, newMovie]);
   };
 
   const deleteMovie = (movie: IMovie): void => {
@@ -108,11 +113,11 @@ export const useMovie = (): UseMovieProps => {
     else dispatch(setFilterType("all"));
   };
 
-  function getSelectedMovieList(): IMovie[] {
+  const getSelectedMovieList = (): IMovie[] => {
     if (filterBy === "all") return movieList;
 
     return favoriteMovies;
-  }
+  };
 
   return {
     changeFilterType,

@@ -38,6 +38,12 @@ export const movieReducer = (
         apiKey: action.payload,
       };
 
+    case MovieActionTypes.SET_FAVORITE_MOVIES:
+      return {
+        ...state,
+        favoriteMovies: action.payload,
+      };
+
     case MovieActionTypes.SET_FILTER_TYPE:
       return {
         ...state,
