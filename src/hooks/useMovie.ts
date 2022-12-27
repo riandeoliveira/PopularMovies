@@ -6,8 +6,8 @@ import {
   setFilterType,
   setMovieList,
 } from "redux/movie/actions";
-import type { RootState } from "redux/store";
 import type { IApiMovie, IMovie } from "types/movie";
+import type { RootState } from "types/redux";
 import { useLocalStorage } from "usehooks-ts";
 
 interface UseMovieProps {

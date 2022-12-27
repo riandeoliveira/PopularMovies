@@ -1,4 +1,5 @@
 import type { IMovie } from "types/movie";
+import type { PayloadAction } from "types/redux";
 import { MovieActionTypes } from "./action-types";
 
 export interface MovieState {
@@ -17,7 +18,7 @@ export const movieInitialState: MovieState = {
 
 export const movieReducer = (
   state = movieInitialState,
-  action: any
+  action: PayloadAction<any>
 ): MovieState => {
   switch (action.type) {
     case MovieActionTypes.ADD_MOVIE_TO_FAVORITES:
