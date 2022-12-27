@@ -38,10 +38,15 @@ export const MovieCard = (props: MovieCardProps): JSX.Element => {
               <span>{props.rating}</span>
             </div>
             <div className="flex gap-3">
-              <FavoriteHeart
-                className={props.favorite ? "fill-complementary-red" : ""}
+              <button
+                type="button"
                 onClick={() => favoriteMovie(props)}
-              />
+                className="flex"
+              >
+                <FavoriteHeart
+                  className={props.favorite ? "fill-complementary-red" : ""}
+                />
+              </button>
               <span>Favoritar</span>
             </div>
           </div>
