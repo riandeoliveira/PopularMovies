@@ -1,8 +1,7 @@
-import { FilterContext } from "contexts/FIlterContext";
-import { useContext } from "react";
+import { useMovie } from "hooks/useMovie";
 
 export const FilterField = (): JSX.Element => {
-  const { changeFilterType } = useContext(FilterContext);
+  const { changeFilterType } = useMovie();
 
   return (
     <div className="flex gap-3 mt-8 justify-center">

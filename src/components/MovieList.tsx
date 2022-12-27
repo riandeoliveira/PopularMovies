@@ -1,11 +1,11 @@
-import { FilterContext } from "contexts/FIlterContext";
-import { useContext } from "react";
+import { useMovie } from "hooks/useMovie";
+import type { IMovie } from "types/movie";
 import { MovieCard } from "./MovieCard";
 
 export const MovieList = (): JSX.Element => {
-  const { getSelectedMovieList } = useContext(FilterContext);
+  const { getSelectedMovieList } = useMovie();
 
-  const movies = getSelectedMovieList();
+  const movies: IMovie[] = getSelectedMovieList();
 
   return (
     <div className="flex justify-center pt-16 pb-16">

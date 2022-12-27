@@ -1,15 +1,16 @@
-import { MovieContext } from "contexts/MovieContext";
-import { useContext, type FormEvent } from "react";
+import { useMovie } from "hooks/useMovie";
+import { useRef, type FormEvent } from "react";
 import SearchMovie from "../../public/assets/icons/search-movie.svg";
 
 export const SearchField = (): JSX.Element => {
-  const { fetchMovies, setMovieSearchName } = useContext(MovieContext);
+  const { fetchMoviesByName } = useMovie();
+  const movieSearchField = useRef<HTMLInputElement>(null);
 
-  function handleSubmit(event: FormEvent) {
+  const handleSubmit = (event: FormEvent): void => {
     event.preventDefault();
 
-    fetchMovies();
-  }
+    fetchMoviesByName(movieSearchField.current?.value as string);
+  };
 
   return (
     <div className="flex justify-center mt-12 px-4">
@@ -20,7 +21,7 @@ export const SearchField = (): JSX.Element => {
         <input
           type="text"
           placeholder="Digite algum filme para pesquisar..."
-          onChange={(e) => setMovieSearchName(e.target.value)}
+          ref={movieSearchField}
           className="bg-neutral-dark w-full outline-none text-white"
         />
         <button type="button" title="Buscar filme">

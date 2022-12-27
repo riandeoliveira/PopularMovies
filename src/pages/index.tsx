@@ -2,9 +2,10 @@ import { FilterField } from "components/FilterField";
 import { Header } from "components/Header";
 import { MovieList } from "components/MovieList";
 import { SearchField } from "components/SearchField";
-import { MovieContext } from "contexts/MovieContext";
 import type { GetStaticProps, NextPage } from "next";
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { setApiKey } from "redux/movie/actions";
 
 interface HomeProps {
   apiKey: string;
@@ -19,11 +20,11 @@ export const getStaticProps: GetStaticProps = () => {
 };
 
 const Home: NextPage<HomeProps> = ({ apiKey }): JSX.Element => {
-  const { setApiKey } = useContext(MovieContext);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    setApiKey(apiKey);
-  });
+    dispatch(setApiKey(apiKey));
+  }, []);
 
   return (
     <div className="bg-primary-dark min-h-screen font-primary-family">
