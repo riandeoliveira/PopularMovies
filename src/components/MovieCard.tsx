@@ -28,7 +28,7 @@ export const MovieCard = (props: MovieCardProps): JSX.Element => {
             className="shadow-image rounded-full h-40 object-cover mr-16 max-tablet-m:mr-0"
           />
         </div>
-        <div className="flex flex-col justify-center gap-6 w-[260px] text-lg text-neutral-lightness max-tablet-m:w-full max-tablet-m:text-center">
+        <div className="flex flex-col justify-center gap-6 w-[260px] text-lg text-white max-tablet-m:w-full max-tablet-m:text-center">
           <span>
             {props.name} ({props.year})
           </span>

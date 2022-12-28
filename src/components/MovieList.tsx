@@ -52,7 +52,7 @@ export const MovieList = (): JSX.Element => {
       );
     }
 
-    return <p className="text-center">{errorMessage}</p>;
+    return <p className="text-center text-white">{errorMessage}</p>;
   };
 
   return (
