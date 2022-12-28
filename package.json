@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "private": true,
-  "homepage": "<YOUR_PROJECT_URL>",
+  "homepage": "https://popular-movies-six.vercel.app/",
   "main": "src/pages/_app.tsx",
   "author": {
     "name": "Rian Oliveira",
