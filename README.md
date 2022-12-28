@@ -1,8 +1,6 @@
 <div align="center">
-  <img src=".github/header.svg" alt="7 Days Of Code logo" />
-  <br />
   <img src=".github/logo.png" alt="JavaScript and DOM logo" />
-  <h1>🚀 Filmes Populares - #7DaysOfCode 🚀</h1>
+  <h1>🚀 Popular Movies - #7DaysOfCode 🚀</h1>
 </div>
 
 ## 📚 Sobre
