@@ -35,6 +35,13 @@ export const setFilterType = (
   payload,
 });
 
+export const setIsLoadingMovies = (
+  payload: boolean
+): PayloadAction<typeof payload> => ({
+  type: MovieActionTypes.SET_IS_LOADING_MOVIES,
+  payload,
+});
+
 export const setMovieList = (
   payload: IMovie[]
 ): PayloadAction<typeof payload> => ({

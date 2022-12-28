@@ -4,6 +4,7 @@ import {
   addMovieToFavorites,
   deleteMovieFromFavorites,
   setFilterType,
+  setIsLoadingMovies,
   setMovieList,
 } from "redux/movie/actions";
 import type { IApiMovie, IMovie } from "types/movie";
@@ -97,6 +98,8 @@ export const useMovie = (): UseMovieProps => {
     const url: string = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${movieName}`;
 
     try {
+      dispatch(setIsLoadingMovies(true));
+
       const response: AxiosResponse<{ results: IApiMovie[] }> = await axios.get(
         url
       );
@@ -105,6 +108,8 @@ export const useMovie = (): UseMovieProps => {
       createMovieData(movies);
     } catch (error) {
       console.log(error);
+    } finally {
+      dispatch(setIsLoadingMovies(false));
     }
   };
 

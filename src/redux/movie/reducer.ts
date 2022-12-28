@@ -6,6 +6,7 @@ export interface MovieState {
   apiKey: string;
   favoriteMovies: IMovie[];
   filterBy: "all" | "favorites";
+  isLoading: boolean;
   movieList: IMovie[];
 }
 
@@ -13,6 +14,7 @@ export const movieInitialState: MovieState = {
   apiKey: "",
   favoriteMovies: [],
   filterBy: "all",
+  isLoading: false,
   movieList: [],
 };
 
@@ -49,6 +51,12 @@ export const movieReducer = (
       return {
         ...state,
         filterBy: action.payload,
+      };
+
+    case MovieActionTypes.SET_IS_LOADING_MOVIES:
+      return {
+        ...state,
+        isLoading: action.payload,
       };
 
     case MovieActionTypes.SET_MOVIE_LIST:
