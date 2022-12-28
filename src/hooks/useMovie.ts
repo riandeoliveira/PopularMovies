@@ -101,6 +101,7 @@ export const useMovie = (): UseMovieProps => {
     const url: string = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${movieName}`;
 
     try {
+      dispatch(setMovieList([]));
       dispatch(setIsLoadingMovies(true));
 
       const response: AxiosResponse<{ results: IApiMovie[] }> = await axios.get(
