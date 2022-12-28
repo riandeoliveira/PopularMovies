@@ -17,18 +17,18 @@ export const MovieCard = (props: MovieCardProps): JSX.Element => {
   const { favoriteMovie } = useMovie();
 
   return (
-    <div className="bg-primary-light flex px-10 py-7 rounded-lg shadow-card justify-between">
-      <div className="flex">
-        <div className="flex items-center">
+    <div className="bg-primary-light flex px-10 py-7 rounded-lg shadow-card justify-between max-laptop-m:flex-col gap-6">
+      <div className="flex max-laptop-m:justify-evenly max-tablet-m:flex-col gap-6">
+        <div className="flex items-center max-tablet-m:justify-center">
           <Image
             src={props.image}
             alt="Movie image"
             width={160}
             height={160}
-            className="shadow-image rounded-full h-40 object-cover mr-16"
+            className="shadow-image rounded-full h-40 object-cover mr-16 max-tablet-m:mr-0"
           />
         </div>
-        <div className="flex flex-col justify-center gap-6 w-[260px] text-lg text-neutral-lightness">
+        <div className="flex flex-col justify-center gap-6 w-[260px] text-lg text-neutral-lightness max-tablet-m:w-full max-tablet-m:text-center">
           <span>
             {props.name} ({props.year})
           </span>
@@ -52,7 +52,7 @@ export const MovieCard = (props: MovieCardProps): JSX.Element => {
           </div>
         </div>
       </div>
-      <p className="text-neutral-light font-medium leading-8 w-[592px] flex items-center">
+      <p className="text-neutral-light font-medium leading-8 w-[592px] flex items-center max-laptop-m:w-full">
         {props.description}
       </p>
     </div>

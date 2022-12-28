@@ -4,7 +4,7 @@ export const FilterField = (): JSX.Element => {
   const { changeFilterType } = useMovie();
 
   return (
-    <div className="flex gap-3 mt-8 justify-center">
+    <div className="flex gap-3 mt-8 justify-center px-4">
       <input
         type="checkbox"
         id="toggle_movies"

@@ -26,7 +26,7 @@ export const SearchField = (): JSX.Element => {
           ref={movieSearchField}
           className="bg-neutral-dark w-full outline-none text-white"
         />
-        <button type="button" title="Buscar filme">
+        <button type="button" title="Buscar filme" onClick={handleSubmit}>
           <SearchMovie />
         </button>
       </form>
