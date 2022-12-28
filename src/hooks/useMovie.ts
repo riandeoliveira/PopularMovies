@@ -1,5 +1,6 @@
 import axios, { type AxiosResponse } from "axios";
 import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
 import {
   addMovieToFavorites,
   deleteMovieFromFavorites,
@@ -49,6 +50,10 @@ export const useMovie = (): UseMovieProps => {
     dispatch(addMovieToFavorites(newMovie));
 
     setStorageMovies([...storageMovies, newMovie]);
+
+    toast.success(
+      `${movie.name} (${movie.year}) foi adicionado aos seus favoritos!`
+    );
   };
 
   const deleteMovie = (movie: IMovie): void => {
@@ -59,6 +64,10 @@ export const useMovie = (): UseMovieProps => {
     dispatch(deleteMovieFromFavorites(updatedMovieList));
 
     setStorageMovies(updatedMovieList);
+
+    toast.warning(
+      `${movie.name} (${movie.year}) foi removido dos seus favoritos!`
+    );
   };
 
   const favoriteMovie = (movie: IMovie): void => {
