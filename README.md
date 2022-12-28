@@ -1,24 +1,27 @@
 <div align="center">
-  <h1>Popular Movies</h1>
+  <img src=".github/header.svg" alt="7 Days Of Code logo" />
+  <br />
+  <img src=".github/logo.png" alt="JavaScript and DOM logo" />
+  <h1>🚀 Filmes Populares - #7DaysOfCode 🚀</h1>
 </div>
 
 ## 📚 Sobre
 
-<!-- Uma breve descrição do seu projeto -->
+Aplicação para pesquisar e favoritar filmes no Local Storage do navegador, fazendo uso da API do [The Movie Database (TMDB)](https://www.themoviedb.org/?language=pt-BR).
 
 ## 🏗️ Desenvolvimento
 
-<!-- Detalhes sobre o desenvolvimento -->
+Projeto proposto pela desafiante [Giovanna Moeller](https://www.linkedin.com/in/giovannamoeller/?originalSubdomain=br) durante o [7 Days Of Code](https://7daysofcode.io/) da [Alura](https://www.alura.com.br/).
 
 ## 🕹️ Possui as seguintes funcionalidades:
 
-- Funcionalidade 1
-- Funcionalidade 2
-- Funcionalidade 3
+- Adicionar/remover filme dos favoritos.
+- Filtrar filmes por pesquisados ou favoritos.
+- Pesquisa de filmes pelo nome.
 
 ## 📝 Notas
 
-<!-- Notas sobre o projeto -->
+Apesar das tecnologias propostas pelo desafio serem apenas JavaScript e DOM, optei por treinar utilizando minha stack atual.
 
 ## 🔎 Demonstração
 
@@ -78,28 +81,6 @@
         <img src="https://skillicons.dev/icons?i=next" />
         <br>
         <span>Next</span>
-      </td>
-    </tr>
-    <tr>
-      <td align="center" width="110" height="110">
-        <img src="https://skillicons.dev/icons?i=jest" />
-        <br>
-        <span>Jest</span>
-      </td>
-      <td align="center" width="110" height="110">
-        <img src="https://skillicons.dev/icons?i=mongodb" />
-        <br>
-        <span>MongoDB</span>
-      </td>
-      <td align="center" width="110" height="110">
-        <img src="https://skillicons.dev/icons?i=nodejs" />
-        <br>
-        <span>NodeJS</span>
-      </td>
-      <td align="center" width="110" height="110">
-        <img src="https://skillicons.dev/icons?i=prisma" />
-        <br>
-        <span>Prisma</span>
       </td>
     </tr>
   </tbody>

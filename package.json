@@ -1,6 +1,6 @@
 {
   "name": "popular-movies",
-  "description": "<YOUR_PROJECT_DESCRIPTION>",
+  "description": "Aplicação para pesquisar e favoritar filmes no Local Storage do navegador, fazendo uso da API do The Movie Database (TMDB)",
   "version": "0.1.0",
   "license": "MIT",
   "private": true,
@@ -8,7 +8,7 @@
   "main": "src/pages/_app.tsx",
   "author": {
     "name": "Rian Oliveira",
-    "email": "<YOUR_EMAIL>"
+    "email": "riandiasdeoliveira2001@gmail.com"
   },
   "scripts": {
     "build": "next build",
@@ -24,13 +24,11 @@
     "test": "jest"
   },
   "dependencies": {
-    "@prisma/client": "^4.6.1",
     "@svgr/webpack": "^6.5.1",
     "axios": "^1.1.3",
     "next": "13.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.6.0",
     "react-redux": "^8.0.5",
     "react-toastify": "^9.1.1",
     "sharp": "^0.31.2"
@@ -52,7 +50,6 @@
     "jest-environment-jsdom": "^29.3.1",
     "postcss": "^8.4.19",
     "prettier": "^2.7.1",
-    "prisma": "^4.6.1",
     "redux": "^4.2.0",
     "tailwindcss": "^3.2.4",
     "typescript": "^4.8.4",
@@ -60,7 +57,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/riandeoliveira/<YOUR_PROJECT_NAME>.git"
+    "url": "https://github.com/riandeoliveira/PopularMovies.git"
   },
-  "keywords": []
+  "keywords": [
+    "7daysofcode",
+    "alura",
+    "javascript",
+    "nextjs",
+    "react",
+    "tailwindcss",
+    "typescript"
+  ]
 }
