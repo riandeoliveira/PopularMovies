@@ -23,10 +23,7 @@ export const getStaticProps: GetStaticProps = () => {
 
 const Home: NextPage<HomeProps> = ({ apiKey }): JSX.Element => {
   const dispatch = useDispatch();
-  const [storageMovies, setStorageMovies] = useLocalStorage<IMovie[]>(
-    "favorite_movies",
-    []
-  );
+  const [storageMovies] = useLocalStorage<IMovie[]>("favorite_movies", []);
 
   useEffect(() => {
     dispatch(setApiKey(apiKey));

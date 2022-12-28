@@ -81,11 +81,14 @@ export const useMovie = (): UseMovieProps => {
       const newMovie: IMovie = {
         id: movie.id,
         name: movie.title,
-        description: movie.overview,
+        description: movie.overview || "Este filme não possui uma descrição!",
         year: Number(movie.release_date.slice(0, 4)),
         rating: movie.vote_average.toFixed(1) as any,
         favorite: getFavoriteMovieStatus(movie.id),
-        image: `https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`,
+        image:
+          movie.backdrop_path === null
+            ? "https://telhafer.com.br/image/no_image.jpg"
+            : `https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`,
       };
 
       return newMovie;
