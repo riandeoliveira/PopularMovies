@@ -16,7 +16,7 @@ interface HomeProps {
 export const getStaticProps: GetStaticProps = () => {
   return {
     props: {
-      apiKey: process.env.API_KEY,
+      apiKey: String(process.env.API_KEY),
     },
   };
 };

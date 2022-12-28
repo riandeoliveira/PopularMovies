@@ -29,7 +29,7 @@ Apesar das tecnologias propostas pelo desafio serem apenas JavaScript e DOM, opt
 
 ## 💻 Como acessar
 
-<!-- Onde a sua aplicação está hospedada? -->
+A aplicação está hospedada na **Vercel** e pode ser acessada [aqui](https://linkedin-clone-zeta-three.vercel.app/).
 
 ## 🛠️ Tecnologias utilizadas
 
