@@ -3,10 +3,13 @@ import { useSelector } from "react-redux";
 import type { IMovie } from "types/movie";
 import type { RootState } from "types/redux";
 import { MovieCard } from "./MovieCard";
+import { Spinner } from "./Spinner";
 
 export const MovieList = (): JSX.Element => {
   const { getSelectedMovieList } = useMovie();
-  const { filterBy } = useSelector((state: RootState) => state.movie);
+  const { filterBy, isLoading } = useSelector(
+    (state: RootState) => state.movie
+  );
 
   const movies: IMovie[] = getSelectedMovieList();
 
@@ -20,24 +23,33 @@ export const MovieList = (): JSX.Element => {
     if (!hasMovieList) {
       errorMessage = "Nenhum filme encontrado :(";
     }
+
     if (!hasFavoriteMovies) {
       errorMessage =
         "Você ainda não possui filmes favoritos. Experimente adicionar alguns!";
     }
 
     if (hasMovies) {
-      return movies.map((movie) => (
-        <MovieCard
-          id={movie.id}
-          name={movie.name}
-          description={movie.description}
-          year={movie.year}
-          rating={movie.rating}
-          favorite={movie.favorite}
-          image={movie.image}
-          key={movie.id}
-        />
-      ));
+      return (
+        <>
+          {isLoading ? (
+            <Spinner />
+          ) : (
+            movies.map((movie) => (
+              <MovieCard
+                id={movie.id}
+                name={movie.name}
+                description={movie.description}
+                year={movie.year}
+                rating={movie.rating}
+                favorite={movie.favorite}
+                image={movie.image}
+                key={movie.id}
+              />
+            ))
+          )}
+        </>
+      );
     }
 
     return <p className="text-center">{errorMessage}</p>;
