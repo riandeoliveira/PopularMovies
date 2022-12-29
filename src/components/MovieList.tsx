@@ -38,6 +38,7 @@ export const MovieList = (): JSX.Element => {
           year={movie.year}
           rating={movie.rating}
           favorite={movie.favorite}
+          votes={movie.votes}
           image={movie.image}
           key={movie.id}
         />
