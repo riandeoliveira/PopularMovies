@@ -47,7 +47,12 @@ export const MovieCard = (props: MovieCardProps): JSX.Element => {
                   className={props.favorite ? "fill-complementary-red" : ""}
                 />
               </button>
-              <span>Favoritar</span>
+              <label
+                onClick={() => favoriteMovie(props)}
+                className="cursor-pointer"
+              >
+                Favoritar
+              </label>
             </div>
           </div>
         </div>
