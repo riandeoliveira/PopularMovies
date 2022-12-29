@@ -94,6 +94,7 @@ export const useMovie = (): UseMovieProps => {
         year: Number(movie.release_date.slice(0, 4)),
         rating: movie.vote_average.toFixed(1) as any,
         favorite: getFavoriteMovieStatus(movie.id),
+        votes: movie.vote_count,
         image:
           movie.backdrop_path === null
             ? "https://telhafer.com.br/image/no_image.jpg"
@@ -132,7 +133,7 @@ export const useMovie = (): UseMovieProps => {
   };
 
   const getSelectedMovieList = (): IMovie[] => {
-    if (filterBy === "all") return movieList;
+    if (filterBy === "all") return movieList.sort((a, b) => b.votes - a.votes);
 
     return favoriteMovies;
   };

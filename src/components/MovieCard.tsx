@@ -1,22 +1,13 @@
 import { useMovie } from "hooks/useMovie";
 import Image from "next/image";
+import type { IMovie } from "types/movie";
 import FavoriteHeart from "../../public/assets/icons/favorite-heart.svg";
 import RatingStar from "../../public/assets/icons/rating-star.svg";
 
-interface MovieCardProps {
-  id: number;
-  name: string;
-  description: string;
-  year: number;
-  rating: number;
-  favorite: boolean;
-  image: string;
-}
+interface MovieCardProps extends IMovie {}
 
 export const MovieCard = (props: MovieCardProps): JSX.Element => {
   const { favoriteMovie } = useMovie();
-
-  console.log(props.id);
 
   return (
     <div className="bg-primary-light flex px-10 py-7 rounded-lg shadow-card justify-between max-laptop-m:flex-col gap-6">
