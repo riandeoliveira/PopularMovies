@@ -18,7 +18,7 @@ export const MovieCard = (props: MovieCardProps): JSX.Element => {
             rel="external noreferrer"
             target="_blank"
             title="Ir para o perfil do filme"
-            className="hover:text-zinc-400 transition-colors mr-16 max-tablet-m:mr-0"
+            className="text-white transition-colors mr-16 max-tablet-m:mr-0"
           >
             <Image
               src={props.image}
