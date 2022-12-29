@@ -107,7 +107,7 @@ export const useMovie = (): UseMovieProps => {
   };
 
   const fetchMoviesByName = async (movieName: string): Promise<void> => {
-    const url: string = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${movieName}`;
+    const url: string = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${movieName}&language=pt-BR`;
 
     try {
       dispatch(setMovieList([]));
