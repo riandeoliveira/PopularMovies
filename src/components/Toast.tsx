@@ -13,6 +13,8 @@ export const Toast = (): JSX.Element => {
       position="top-right"
       rtl={false}
       theme="dark"
+      toastClassName="bg-neutral-dark"
+      className="flex flex-col max-tablet-s:p-4 max-tablet-s:gap-4"
     />
   );
 };
