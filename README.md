@@ -61,9 +61,9 @@ A aplicação está hospedada na **Vercel** e pode ser acessada [aqui](https://p
     </tr>
     <tr>
       <td align="center" width="110" height="110">
-        <img src="https://skillicons.dev/icons?i=markdown" />
+        <img src="https://skillicons.dev/icons?i=redux" />
         <br>
-        <span>Markdown</span>
+        <span>Redux</span>
       </td>
       <td align="center" width="110" height="110">
         <img src="https://skillicons.dev/icons?i=tailwind" />
